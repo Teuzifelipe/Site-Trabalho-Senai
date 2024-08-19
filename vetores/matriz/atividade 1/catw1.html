@@ -1,0 +1,148 @@
+<!--Abrind a tag original da página-->
+<html>
+     <header>
+          <nav>
+               <a href="../../../siteinicial/vetor.html"><div class="opcao">Voltar</div></a>
+          </nav>
+     </header>
+     <center>
+          <br><br><br><br>
+          <h1>Atividade - Matrix 2x2</h1>
+          <h3>Usando o "Array()", o usuário irá digitar uma sequenciade números, 
+           com o objetivo de criar uma matriz<br> (mostrando-os no console),
+           e no final será digitado o número que vai multiplicar os valores da matriz.<br>
+           (Apertar "Ctrl+Shift+J" para abrir o Console)</h3>
+     </center>
+     <head>
+          <title>Matriz</title>
+	     <meta charse="UTF-8">
+	     <meta name="Autor" content="Matheus F. Leal">
+     </head>
+     <style>
+          header {
+               height:0px;
+               background-color:#330000;
+          }
+          nav {
+               float:left;
+               clear:both;
+               width:50%;
+               margin:0px auto;
+               height:55px;
+          }	 
+          nav a {
+               color:white;
+               text-decoration:none;
+               text-align:center;
+          }
+          nav .opcao {
+               float:left;
+               width:31.3%;
+               background-color:#330000;
+               padding:10px 0;
+               margin:0 1%;
+               font-size:26px;
+          }
+          nav .opcao:hover {
+               background-color:#500000;
+          }
+     </style>
+     <!--Abrindo a tag body da página principal, colocando a cor cinza no body da página-->
+     <body bgcolor="#cccccc">
+          
+     <!--Centralizando o formulário que conterá o componente textarea-->
+          <center>
+               <form>
+                    <br>
+                    <!--Criando area de text para inserir o código a ser executado-->
+                    <textarea name="fonte" cols="170" rows="30">
+                         <html>
+                              <body>
+                                   <style>
+                                        section {
+                                             margin-top:0px auto;
+                                        }
+                                        .cadtriz {
+                                             width:300px;
+                                             margin:0px auto;
+                                             font-weight:bold;
+                                             margin-bottom:10px;
+                                        }
+                                        .cadtriz input {
+                                             margin:5px auto;
+                                             width:100%;
+                                             padding:5px 0;
+                                        }
+                                        .cadtriz button {
+                                             width:30%;
+                                             margin:0 10%;
+                                             background-color:#b1ccf5;
+                                             font-weight:bold;
+                                             font-size:16px;
+                                        }
+                                        label {
+                                             float:left;
+                                        }
+                                        h2 {
+                                             text-align:center;
+                                             margin-top:0px;
+                                             margin-bottom:10px;
+                                             font-size:50px;
+                                        }
+                                   </style>
+                                   <section>
+                                        <h2>Atividade - Uso Matrix 2x2</h2>
+                                             <font face="arial">
+                                                  <form name="frmtriz" action="#" method="get" onsubmit="return validaFormulario()">
+                                                       <fieldset class="cadtriz">
+                                                            <legend>Entrada de Dados</legend>
+                                                       <br>
+                                                            <button type="submit">Enviar</button><button type="button" onClick="window.location.reload()">Voltar</button>
+                                                       </fieldset>
+                                                  </form>
+                                             </font>
+                                   </section>
+                                   <script type="text/javascript">
+                                             function validaFormulario(){
+                                                  let dimensao=2;
+                                                  let num;
+                                                  let mnumint=Array(dimensao);
+                                                  for (let i=0; i<mnumint.length; i++){
+                                                       mnumint[i]=Array(dimensao);
+                                                  }
+                                                  
+                                                  //ALIMENTANDO A MATRIZ
+                                                  let linha, coluna;
+                                                  for (linha=0; linha<dimensao; linha++){
+                                                       for(coluna=0; coluna<dimensao;coluna++){
+                                                            mnumint[linha][coluna]=parseInt(prompt("Digite o valor da linha "+linha+" e da coluna "+coluna));
+                                                            console.log("O número na Linha "+linha+", Coluna "+coluna+" é:"+mnumint[linha][coluna]);
+                                                       }
+                                                  }
+                                                  
+                                                  //CALCULO
+                                                  num=parseInt(prompt("Digite um número inteiro:"));
+                                                  for (linha=0; linha<dimensao; linha++){
+                                                       for (coluna=0; coluna<dimensao; coluna++){
+                                                            mnumint[linha][coluna]=mnumint[linha][coluna] * num;
+                                                       }
+                                                  }
+                                                  
+                                                  //IMPRIMINDO OS DADOS DA MATRIZ
+                                                  for (linha=0; linha<dimensao; linha++){
+                                                       for (coluna=0; coluna<dimensao; coluna++){
+                                                            document.write(mnumint[linha][coluna]+"&nbsp&nbsp&nbsp");
+                                                       }
+                                                       document.write("<br>");
+                                                  }return false;
+                                             }
+                                   </script>
+                              </body>
+                         </html>
+                    </textarea>
+                    <br><br>
+                    <input type="button" value="testar pagina" onclick="document.write(fonte.value);">
+               </form>
+          </center>
+     </body>
+</html>	 

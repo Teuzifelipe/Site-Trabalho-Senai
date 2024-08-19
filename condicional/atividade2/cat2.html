@@ -1,0 +1,133 @@
+<!--Abrind a tag original da página-->
+<html>
+     <header>
+          <nav>
+              <a href="../../siteinicial/condi.html"><div class="opcao">Voltar</div></a>
+          </nav>
+     </header>
+     <center>
+          <br><br><br>
+          <h1>Atividade - Número Inteiro</h1>
+          <br>
+          <h3>Usando a estrutura condicional "Se(If())", quando o usuário apertar o botão "Enviar"<br>
+          com o campo vazio, o site vai informar que o campo deve ser preenchido, assim que o<br> 
+          campo for preenchido, o site verifica o número digitado e diz se o numero é PAR ou ÍMPAR.</h3>
+     </center>
+     <head>
+          <title>Estrutura Se (If())</title>
+	     <meta charse="UTF-8">
+	     <meta name="Autor" content="Matheus F. Leal">
+     </head>
+     <style>
+          header {
+               height:0px;
+               background-color:#330000;
+          }
+          nav {
+               float:left;
+               clear:both;
+               width:50%;
+               margin:0px auto;
+               height:55px;
+          }	 
+          nav a {
+               color:white;
+               text-decoration:none;
+               text-align:center;
+          }
+          nav .opcao {
+               float:left;
+               width:31.3%;
+               background-color:#330000;
+               padding:10px 0;
+               margin:0 1%;
+               font-size:26px;
+          }
+          nav .opcao:hover {
+               background-color:#500000;
+          }
+     </style>
+     <!--Abrindo a tag body da página principal, colocando a cor cinza no body da página-->
+     <body bgcolor="#cccccc">
+     <!--Centralizando o formulário que conterá o componente textarea-->
+          <center>
+               <form>
+                    <br>
+                    <!--Criando area de text para inserir o código a ser executado-->
+                    <textarea name="fonte" cols="150" rows="30">
+                         <html>
+                              <body>
+                                   <style>
+                                        section {
+                                             margin-top:0px auto;
+                                        }
+                                        .cadinteiro {
+                                             width:300px;
+                                             margin:0px auto;
+                                             font-weight:bold;
+                                             margin-bottom:10px;
+                                        }
+                                        .cadinteiro input {
+                                             margin:5px auto;
+                                             width:100%;
+                                             padding:5px 0;
+                                        }
+                                        .cadinteiro button {
+                                             width:30%;
+                                             margin:0 10%;
+                                             background-color:#b1ccf5;
+                                             font-weight:bold;
+                                             font-size:16px;
+                                        }
+                                        label {
+                                             float:left;
+                                        }
+                                        h2 {
+                                             text-align:center;
+                                             margin-top:0px;
+                                             margin-bottom:10px;
+                                             font-size:50px;
+                                        }
+                                   </style>
+                                   <section>
+                                        <h2>Número Inteiro</h2>
+                                        <font face="arial">
+                                            <form name="frmnumint" action="#" method="get" onsubmit="return validaFormulario()">
+                                                 <fieldset class="cadinteiro">
+                                                      <legend>Entrada de Dados</legend>
+                                                  <br>
+                                                      <label for="numint">Número Inteiro: </label>
+                                                       <input type="txt" name="txtnumint" id="numint"><br>
+                                                  <br>
+                                                      <button type="reset">Limpar</button><button type="submit">Enviar</button><button type="button" onClick="window.location.reload()">Voltar</button>
+                                                  </fieldset>
+                                             </form>
+                                        </font>
+                                   </section>
+                                   <script type="text/javascript">
+                                        function validaFormulario() {
+                                             if (document.frmnumint.txtnumint.value==""){
+                                                  alert("Campo Número Inteiro deve ser preenchido!");
+                                                  document.frmnumint.txtnumint.focus();
+                                                  return false;
+                                             }else {
+                                                  let numint=document.frmnumint.txtnumint.value;
+                                                  if(numint%2==0){
+                                                       alert("O número é par!");
+                                                       return true;
+                                                  }else {
+                                                       alert("O número é impar!");
+                                                  }
+                                             }
+                                             
+                                        }
+                                   </script>
+                              </body>
+                         </html>
+                    </textarea>
+                    <br><br>
+                    <input type="button" value="testar pagina" onclick="document.write(fonte.value);">
+               </form>
+          </center>
+     </body>
+</html>	 

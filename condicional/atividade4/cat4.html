@@ -1,0 +1,166 @@
+<!--Abrind a tag original da página-->
+<html>
+     <header>
+          <nav>
+              <a href="../../siteinicial/condi.html"><div class="opcao">Voltar</div></a>
+          </nav>
+       </header>
+     <center>
+          <br><br><br>
+          <h1>Atividade - Mês</h1>
+          <br>
+          <h3>Usando a estrutura condicional "Se(If())", quando o usuário apertar o botão "Enviar"<br>
+          com o campo vazio, o site vai informar que o campo deve ser preenchido,<br> 
+          assim que o campo for preenchido, o site verifica o número digitado entre 1 à 10<br>
+          e dependendo do número selecionado, ele dirá o mês correspondente.</h3>
+     </center>
+     <head>
+          <title>Estrutura Se (If())</title>
+	     <meta charse="UTF-8">
+	     <meta name="Autor" content="Matheus F. Leal">
+     </head>
+     <style>
+          header {
+               height:0px;
+               background-color:#330000;
+          }
+          nav {
+               float:left;
+               clear:both;
+               width:50%;
+               margin:0px auto;
+               height:55px;
+          }	 
+          nav a {
+               color:white;
+               text-decoration:none;
+               text-align:center;
+          }
+          nav .opcao {
+               float:left;
+               width:31.3%;
+               background-color:#330000;
+               padding:10px 0;
+               margin:0 1%;
+               font-size:26px;
+          }
+          nav .opcao:hover {
+               background-color:#500000;
+          }
+     </style>
+     <!--Abrindo a tag body da página principal, colocando a cor cinza no body da página-->
+     <body bgcolor="#cccccc">
+     <!--Centralizando o formulário que conterá o componente textarea-->
+          <center>
+               <form>
+                    <br>
+                    <!--Criando area de text para inserir o código a ser executado-->
+                    <textarea name="fonte" cols="150" rows="30">
+                         <html>
+                              <body>
+                                   <style>
+                                        section {
+                                             margin-top:0px auto;
+                                        }
+                                        .cadmes {
+                                             width:300px;
+                                             margin:0px auto;
+                                             font-weight:bold;
+                                             margin-bottom:10px;
+                                        }
+                                        .cadmes input {
+                                             margin:5px auto;
+                                             width:100%;
+                                             padding:5px 0;
+                                        }
+                                        .cadmes button {
+                                             width:30%;
+                                             margin:0 10%;
+                                             background-color:#b1ccf5;
+                                             font-weight:bold;
+                                             font-size:16px;
+                                        }
+                                        label {
+                                             float:left;
+                                        }
+                                        h2 {
+                                             text-align:center;
+                                             margin-top:0px;
+                                             margin-bottom:10px;
+                                             font-size:50px;
+                                        }
+                                   </style>
+                                   <section>
+                                        <h2>Mês</h2>
+                                        <font face="arial">
+                                             <form name="frmmes" action="#" method="get" onsubmit="return validaFormulario()">
+                                                  <fieldset class="cadmes">
+                                                       <legend>Entrada de Dados</legend>
+                                                  <br>
+                                                       <label for="num">Insira um número de 1 à 12: </label>
+                                                       <input type="text" name="txtmes" id="mes"><br>
+                                                  <br>
+                                                       <button type="reset">Limpar</button><button type="submit">Enviar</button><button type="button" onClick="window.location.reload()">Voltar</button>
+                                                  </fieldset>
+                                             </form>
+                                        </font>
+                                   </section>
+                                   <script type="text/javascript">
+                                        function validaFormulario() {
+                                             if (document.frmmes.txtmes.value==""){
+                                                  alert("O campo deve ser preenchido!");
+                                                  document.frmmes.txtmes.focus();
+                                                  return false;
+                                             }else {
+                                                  let mes=parseInt(document.getElementById('mes').value);
+                                                  if (mes==1){
+                                                       alert("O número "+mes+ " corresponde ao mês de Janeiro!");
+                                                       return true;
+                                                  }else if (mes==2){
+                                                  alert("O número "+mes+ " corresponde ao mês de Fevereiro!");
+                                                  return true;
+                                                  }else if (mes==3){
+                                                  alert("O número "+mes+ " corresponde ao mês de Março!");
+                                                  return true;
+                                                  }else if (mes==4){
+                                                  alert("O número "+mes+ " corresponde ao mês de Abril!");
+                                                  return true;
+                                                  }else if (mes==5){
+                                                  alert("O número "+mes+ " corresponde ao mês de Maio!");
+                                                  return true;
+                                                  }else if (mes==6){
+                                                  alert("O número "+mes+ " corresponde ao mês de Junho!");
+                                                  return true;
+                                                  }else if (mes==7){
+                                                  alert("O número "+mes+ " corresponde ao mês de Julho!");
+                                                  return true;
+                                                  }else if (mes==8){
+                                                  alert("O número "+mes+ " corresponde ao mês de Agosto!");
+                                                  return true;
+                                                  }else if (mes==9){
+                                                  alert("O número "+mes+ " corresponde ao mês de Setembro!");
+                                                  return true;
+                                                  }else if (mes==10){
+                                                  alert("O número "+mes+ " corresponde ao mês de Outubro!");
+                                                  return true;
+                                                  }else if (mes==11){
+                                                  alert("O número "+mes+ " corresponde ao mês de Novembro!");
+                                                  return true;
+                                                  }else if (mes==12){
+                                                  alert("O número "+mes+ " corresponde ao mês de Dezembro!");
+                                                  return true;
+                                                  }else {
+                                                       alert("O número digitado não corresponde à um Mês do Ano!");
+                                                  }
+                                             }
+                                        }
+                                   </script>
+                              </body>
+                         </html>
+                    </textarea>
+                    <br><br>
+                    <input type="button" value="testar pagina" onclick="document.write(fonte.value);">
+               </form>
+          </center>
+     </body>
+</html>	 

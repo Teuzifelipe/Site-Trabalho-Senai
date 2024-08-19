@@ -1,0 +1,131 @@
+<!--Abrind a tag original da página-->
+<html>
+     <header>
+          <nav>
+               <a href="../../../siteinicial/repeti.html"><div class="opcao">Voltar</div></a>
+          </nav>
+     </header>
+     <center>
+          <br><br><br><br>
+          <h1>Atividade - Maior número</h1>
+          <h3>Usando a estrutura de repetição "While()", será solicitado 3 números, assim que<br>
+          o primeiro for digitado, seré mantido na memória, quando o próximo for digitado, será<br>
+          comparado se ele é maior que o número digitado anteriormente, no final será mostrado o maior número digitado.<br>
+          (Apertar "Ctrl+Shift+J" para abrir o Console)</h3>
+     </center>
+     <head>
+          <title>Estrutura Enquanto (While())</title>
+	     <meta charse="UTF-8">
+	     <meta name="Autor" content="Matheus F. Leal">
+     </head>
+     <style>
+          header {
+               height:0px;
+               background-color:#330000;
+          }
+          nav {
+               float:left;
+               clear:both;
+               width:50%;
+               margin:0px auto;
+               height:55px;
+          }	 
+          nav a {
+               color:white;
+               text-decoration:none;
+               text-align:center;
+          }
+          nav .opcao {
+               float:left;
+               width:31.3%;
+               background-color:#330000;
+               padding:10px 0;
+               margin:0 1%;
+               font-size:26px;
+          }
+          nav .opcao:hover {
+               background-color:#500000;
+          }
+     </style>
+     <!--Abrindo a tag body da página principal, colocando a cor cinza no body da página-->
+     <body bgcolor="#cccccc">
+          
+     <!--Centralizando o formulário que conterá o componente textarea-->
+          <center>
+               <form>
+                    <br>
+                    <!--Criando area de text para inserir o código a ser executado-->
+                    <textarea name="fonte" cols="177" rows="35">
+                         <html>
+                              <body>
+                                   <style>
+                                        section {
+                                             margin-top:0px auto;
+                                        }
+                                        .cadexi {
+                                             width:300px;
+                                             margin:0px auto;
+                                             font-weight:bold;
+                                             margin-bottom:10px;
+                                        }
+                                        .cadexi input {
+                                             margin:5px auto;
+                                             width:100%;
+                                             padding:5px 0;
+                                        }
+                                        .cadexi button {
+                                             width:30%;
+                                             margin:0 10%;
+                                             background-color:#b1ccf5;
+                                             font-weight:bold;
+                                             font-size:16px;
+                                        }
+                                        label {
+                                             float:left;
+                                        }
+                                        h2 {
+                                             text-align:center;
+                                             margin-top:0px;
+                                             margin-bottom:10px;
+                                             font-size:50px;
+                                        }
+                                   </style>
+                                   <section>
+                                        <h2>Atividade 2 - Maior número</h2>
+                                             <font face="arial">
+                                                  <form name="frmexi" action="#" method="get" onsubmit="return validaFormulario()">
+                                                       <fieldset class="cadexi">
+                                                            <legend>Entrada de Dados</legend>
+                                                       <br>
+                                                            <button type="submit">Abrir Prompt</button><button type="button" onClick="window.location.reload()">Voltar</button>
+                                                       </fieldset>
+                                                  </form>
+                                             </font>
+                                   </section>
+                                   <script type="text/javascript">
+                                        function validaFormulario() {
+	
+                                             num=1;
+                                              maior=0
+                                              while(num<=3){
+                                                   numero=parseInt(prompt("Digite o número"));
+                                                   console.log("O número informado é: "+numero);
+                                                   if (numero>maior){
+                                                        maior=numero;
+                                                   }
+                                                   num++;
+                                              }
+                                              console.log("O maior número é: "+maior);
+                                             return false; 
+                                        }
+                                   </script>
+                                   
+                              </body>
+                         </html>
+                    </textarea>
+                    <br><br>
+                    <input type="button" value="testar pagina" onclick="document.write(fonte.value);">
+               </form>
+          </center>
+     </body>
+</html>	 

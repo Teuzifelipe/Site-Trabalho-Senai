@@ -1,0 +1,77 @@
+<!--Abrind a tag original da página-->
+<html>
+     <header>
+          <nav>
+               <a href="../../siteinicial/....html"><div class="opcao">Voltar</div></a>
+          </nav>
+     </header>
+     <center>
+          <br>
+          <h1>...</h1>
+          <br>
+          <h3>...</h3>
+     </center>
+     <head>
+          <title>Teste seu codigo HTML</title>
+	     <meta charse="UTF-8">
+	     <meta name="Autor" content="Fábio B. Oliveira">
+     </head>
+     <style>
+          header {
+               height:0px;
+               background-color:#330000;
+          }
+          nav {
+               float:left;
+               clear:both;
+               width:50%;
+               margin:0px auto;
+               height:55px;
+          }	 
+          nav a {
+               color:white;
+               text-decoration:none;
+               text-align:center;
+          }
+          nav .opcao {
+               float:left;
+               width:31.3%;
+               background-color:#330000;
+               padding:10px 0;
+               margin:0 1%;
+               font-size:26px;
+          }
+          nav .opcao:hover {
+               background-color:#500000;
+          }
+     </style>
+     <!--Abrindo a tag body da página principal, colocando a cor cinza no body da página-->
+     <body bgcolor="#cccccc">
+          
+     <!--Centralizando o formulário que conterá o componente textarea-->
+          <center>
+               <form>
+                    <br>
+                    <!--Criando area de text para inserir o código a ser executado-->
+                    <textarea name="fonte" cols="150" rows="30">
+                         <html>
+                              <body>
+                                   <style>
+                                        /*Escreva seu codigo CSS aqui*/
+                                   </style>
+                                   <section>
+                                        <!--/*Escreva seu codigo HTML aqui*/-->
+                                   </section>
+                                   <script type="text/javascript">
+                                        /*Escreva seu codigo JavaScript aqui*/
+                                   </script>
+                                   
+                              </body>
+                         </html>
+                    </textarea>
+                    <br><br>
+                    <input type="button" value="testar pagina" onclick="document.write(fonte.value);">
+               </form>
+          </center>
+     </body>
+</html>	 

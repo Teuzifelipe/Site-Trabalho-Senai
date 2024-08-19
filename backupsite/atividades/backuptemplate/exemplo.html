@@ -1,0 +1,101 @@
+<!--Abrindo a tag original da página-->
+<html>
+     <head>
+          <title>Exemplo</title>
+	     <meta charse="UTF-8">
+	     <meta name="Autor" content="Matheus F. Leal">
+     </head>
+     <!--Abrindo a tag body da página principal, colocando a cor cinza no body da página-->
+     <body bgcolor="#cccccc">
+     <!--Centralizando o formulário que conterá o componente textarea-->
+          <center>
+               <form>
+                    <br>
+                    <textarea name="fonte" cols="130" rows="80">
+                         <html>
+                              <head>
+                                   <meta charset="UTF-8">
+                                   <style>
+                                        section{
+                                             margin-top:0px;
+                                        }
+                                        .cadbasico{
+                                             width:300px;
+                                             margin:0px auto;
+                                             font-weight:bold;
+                                             margin-bottom:10px;
+                                        }
+                                        .cadbasico input{
+                                             margin:5px auto;
+                                             width:100%;
+                                             padding:5px 0;
+                                        }
+                                        .cadbasico button{
+                                             width:30%;
+                                             margin:0 10%;
+                                             background-color:#b1ccf5;
+                                             font-weight:bold;
+                                             font-size:16px;
+                                        }
+                                        label{
+                                             float:left;
+                                        }
+                                        h2{
+                                             text-align:center;
+                                             margin-top:0px;
+                                             margin-bottom:10px;
+                                             font-size:50px;
+                                        }
+                                   </style>
+                              </head>
+                              <body>
+                                   <section>
+                                        <h2>Estrutura SE (if())</h2>
+                                        <font face="arial">
+                                        <form name="frmcadastro" action="#" method="get" onsubmit="return validaFormulario()">
+                                             <fieldset class="cadbasico">
+                                                  <legend>Dados pessoais</legend>
+                                             <br>
+                                                  <label for="name">Nome:</label>
+                                                  <input type="text" name="txtnome" id="nome"><br>
+                                             <br>
+                                                  <label for="telefone">Telefone:</label>
+                                                  <input type="txt" name="txtfone" id="telefone"><br>
+                                             <br>
+                                                  <label for="email">Email:</label>
+                                                  <input type="email" name="txtemail" id="email"><br>
+                                                  <button type="reset">Limpar</button><button type="submit">Enviar</button>
+                                             </fieldset>
+                                        </form>
+                                        </font>
+                                   </section>
+                                   <script type="text/javascript">
+                                        function validaFormulario(){
+                                             if(document.frmcadastro.txtnome.value==""){
+                                                  alert("Preencha o campo Nome");
+                                                  document.frmcadastro.txtnome.focus();
+                                                  return false;
+                                             }
+                                             if(document.frmcadastro.txtfone.value==""){
+                                                  alert("Preencha o campo Telefone");
+                                                  document.frmcadastro.txtfone.focus();
+                                                  return false;
+                                             }
+                                             if(document.frmcadastro.txtemail.value==""){
+                                                  alert("Preencha o campo Email");
+                                                  document.frmcadastro.txtemail.focus();
+                                                  return false;
+                                             }
+                                           alert("Todos preenchidos - Saindo......");
+                                           return true;
+                                        }
+                                   </script>
+                              </body>
+                         </html>
+                    </textarea>
+                    <br><br>
+                    <input type="button" value="Executar o código" onclick="document.write(fonte.value);">
+               </form>
+          </center>
+     </body>
+</html>	 

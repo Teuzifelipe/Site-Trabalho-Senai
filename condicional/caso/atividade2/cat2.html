@@ -1,0 +1,152 @@
+<!--Abrind a tag original da página-->
+<html>
+     <header>
+          <nav>
+              <a href="../../../siteinicial/condi.html"><div class="opcao">Voltar</div></a>
+          </nav>
+     </header>
+     <center>
+          <br><br><br>
+          <h1>Caso - Idade</h1>
+          <br>
+          <h3>Usando a estrutura condicional "Caso(Case())", o usuário deverá digitar<br>
+               um número de 1-12 e assim mostrará no console, o mês correspondente.<br>
+               (Apertar "CTRL + SHIFT + J" para abrir o console)</h3>
+     </center>
+     <head>
+          <title>Estrutura Se (If())</title>
+	     <meta charse="UTF-8">
+	     <meta name="Autor" content="Matheus F. Leal">
+     </head>
+     <style>
+          header {
+               height:0px;
+               background-color:#330000;
+          }
+          nav {
+               float:left;
+               clear:both;
+               width:50%;
+               margin:0px auto;
+               height:55px;
+          }	 
+          nav a {
+               color:white;
+               text-decoration:none;
+               text-align:center;
+          }
+          nav .opcao {
+               float:left;
+               width:31.3%;
+               background-color:#330000;
+               padding:10px 0;
+               margin:0 1%;
+               font-size:26px;
+          }
+          nav .opcao:hover {
+               background-color:#500000;
+          }
+     </style>
+     <!--Abrindo a tag body da página principal, colocando a cor cinza no body da página-->
+     <body bgcolor="#cccccc">
+     <!--Centralizando o formulário que conterá o componente textarea-->
+          <center>
+               <form>
+                    <br>
+                    <!--Criando area de text para inserir o código a ser executado-->
+                    <textarea name="fonte" cols="150" rows="30">
+                         <html>
+                              <body>
+                                   <style>
+                                        section {
+                                             margin-top:0px auto;
+                                        }
+                                        .cadidad {
+                                             width:300px;
+                                             margin:0px auto;
+                                             font-weight:bold;
+                                             margin-bottom:10px;
+                                        }
+                                        .cadidad input {
+                                             margin:5px auto;
+                                             width:100%;
+                                             padding:5px 0;
+                                        }
+                                        .cadidad button {
+                                             width:30%;
+                                             margin:0 10%;
+                                             background-color:#b1ccf5;
+                                             font-weight:bold;
+                                             font-size:16px;
+                                        }
+                                        label {
+                                             float:left;
+                                        }
+                                        h2 {
+                                             text-align:center;
+                                             margin-top:0px;
+                                             margin-bottom:10px;
+                                             font-size:50px;
+                                        }
+                                   </style>
+                                   <section>
+                                        <h2>Caso - Idade</h2>
+                                             <font face="arial">
+                                                  <form name="frmidad" action="#" method="get" onsubmit="return validaFormulario()">
+                                                       <fieldset class="cadidad">
+                                                            <legend>Entrada de Dados</legend>
+                                                       <br>
+                                                            <label for="idade">Informe um número inteiro: </label>
+                                                            <input type="text" name="txtidad" id="idade"><br>
+                                                       <br>
+                                                            <button type="reset">Limpar</button><button type="submit">Enviar</button><button type="button" onClick="window.location.reload()">Voltar</button>
+                                                       </fieldset>
+                                                  </form>
+                                             </font>
+                                   </section>
+                                   <script type="text/javascript">
+                                        function validaFormulario() {
+                                             if (document.frmidad.txtidad.value==""){
+                                                   alert("O campo deve ser preenchido!");
+                                                   document.frmidad.txtidad.focus();
+                                                   return false;
+                                               }else {
+                                                    let num=parseInt(document.getElementById('idade').value);
+                                                    // Ao usar operadores de lógica colocar true dentro de switch
+                                                    switch(true){
+                                                         case (num>=0&&num<=3):
+                                                            console.log("Com "+num+" ano(s) de idade, é um Bebê!");
+                                                             break;
+                                                         case (num>=4&&num<=10):
+                                                            console.log("Com "+num+" anos de idade, é uma Criança!");
+                                                             break;
+                                                         case (num>=11&&num<=18):
+                                                             console.log("Com "+num+" anos de idade, é um Adolescente!");
+                                                             break;
+                                                         case (num>=19&&num<=59):
+                                                             console.log("Com "+num+" anos de idade, é um Adulto!");
+                                                             break;
+                                                         case (num>=60&&num<=100):
+                                                             console.log("Com "+num+" anos de idade, é um Idoso!");
+                                                             break;
+                                                         case (num>=101&&num<=122):
+                                                             console.log("Vovô, conta a história de como você perdeu um olho na Segunda Guerra Mundial!");
+                                                             break;	 	 
+                                                         default:
+                                                            alert("Idade ímpossivel!");
+                                                            console.log("Idade ímpossivel!");
+                                                             break;
+                                                    }
+                                                    return false;
+                                               }
+                                        }
+                                   </script>
+                              </body>
+                         </html>
+                    </textarea>
+                    <br><br>
+                    <input type="button" value="testar pagina" onclick="document.write(fonte.value);">
+               </form>
+          </center>
+     </body>
+</html>	 

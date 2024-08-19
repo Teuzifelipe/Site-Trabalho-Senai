@@ -1,0 +1,152 @@
+<!--Abrind a tag original da página-->
+<html>
+     <header>
+          <nav>
+              <a href="../../siteinicial/condi.html"><div class="opcao">Voltar</div></a>
+          </nav>
+       </header>
+     <center>
+          <br><br><br>
+          <h1>Atividade - Cálculo média de aluno</h1>
+          <br>
+          <h3>Usando a estrutura condicional "Se(If())", quando o usuário apertar o botão "Enviar"<br>
+          com algum campo vazio, o site vai informar que o campo deve ser preenchido<br> 
+          (isso se aplica para cada campo), assim que os campos forem preenchidos,<br> o site calcula a 
+          média dos números(notas) digitados e mostra o resultado.</h3>
+     </center>
+     <head>
+          <title>Estrutura Se (If())</title>
+	     <meta charse="UTF-8">
+	     <meta name="Autor" content="Matheus F. Leal">
+     </head>
+     <style>
+          header {
+               height:0px;
+               background-color:#330000;
+          }
+          nav {
+               float:left;
+               clear:both;
+               width:50%;
+               margin:0px auto;
+               height:55px;
+          }	 
+          nav a {
+               color:white;
+               text-decoration:none;
+               text-align:center;
+          }
+          nav .opcao {
+               float:left;
+               width:31.3%;
+               background-color:#330000;
+               padding:10px 0;
+               margin:0 1%;
+               font-size:26px;
+          }
+          nav .opcao:hover {
+               background-color:#500000;
+          }
+     </style>
+     <!--Abrindo a tag body da página principal, colocando a cor cinza no body da página-->
+     <body bgcolor="#cccccc">
+     <!--Centralizando o formulário que conterá o componente textarea-->
+          <center>
+               <form>
+                    <br>
+                    <!--Criando area de text para inserir o código a ser executado-->
+                    <textarea name="fonte" cols="150" rows="30">
+                         <html>
+                              <body>
+                                   <style>
+                                        section {
+                                             margin-top:0px auto;
+                                        }
+                                        .cadmedialuno {
+                                             width:300px;
+                                             margin:0px auto;
+                                             font-weight:bold;
+                                             margin-bottom:10px;
+                                        }
+                                        .cadmedialuno input {
+                                             margin:5px auto;
+                                             width:100%;
+                                             padding:5px 0;
+                                        }
+                                        .cadmedialuno button {
+                                             width:30%;
+                                             margin:0 10%;
+                                             background-color:#b1ccf5;
+                                             font-weight:bold;
+                                             font-size:16px;
+                                        }
+                                        label {
+                                             float:left;
+                                        }
+                                        h2 {
+                                             text-align:center;
+                                             margin-top:0px;
+                                             margin-bottom:10px;
+                                             font-size:50px;
+                                        }
+                                   </style>
+                                   <section>
+                                        <h2>Média</h2>
+                                        <font face="arial">
+                                             <form name="frmnotas" action="#" method="get" onsubmit="return validaFormulario()">
+                                                  <fieldset class="cadmedialuno">
+                                                       <legend>Entrada de Dados</legend>
+                                                  <br>
+                                                       <label for="num1">Nota 1: </label>
+                                                       <input type="text" name="txtnum1" id="num1"><br>
+                                                  <br>
+                                                       <label for="num2">Nota 2: </label>
+                                                       <input type="text" name="txtnum2" id="num2"><br>
+                                                  <br>
+                                                       <label for="num3">Nota 3: </label>
+                                                       <input type="text" name="txtnum3" id="num3"><br>
+                                                  <br>
+                                                       <button type="reset">Limpar</button><button type="submit">Enviar</button><button type="button" onClick="window.location.reload()">Voltar</button>
+                                                  </fieldset>
+                                             </form>
+                                        </font>
+                                   </section>
+                                   <script type="text/javascript">
+                                        function validaFormulario() {
+                                             if (document.frmnotas.txtnum1.value==""){
+                                                  alert("Campo Nota 1 deve ser preenchido!");
+                                                  document.frmnotas.txtnum1.focus();
+                                                  return false;
+                                             }else if (document.frmnotas.txtnum2.value==""){
+                                                  alert("Campo Nota 2 deve ser preenchido!");
+                                                  document.frmnotas.txtnum2.focus();
+                                                  return false;
+                                             }else if (document.frmnotas.txtnum3.value==""){
+                                                  alert("Campo Nota 3 deve ser preenchido!");
+                                                  document.frmnotas.txtnum3.focus();
+                                                  return false;
+                                             }else {
+                                                  // Convertendo a nota 1 em numérico com casas decimais
+                                                  let nota1=parseFloat(document.frmnotas.txtnum1.value);
+                                                  let nota2=parseFloat(document.frmnotas.txtnum2.value);
+                                                  let nota3=parseFloat(document.frmnotas.txtnum3.value);
+                                                  let media=(nota1+nota2+nota3)
+                                                  if(media/3>=7){
+                                                       alert("Sua média foi: "+media.toFixed(2)+"\nVocê foi aprovado!");
+                                                       return true;
+                                                  }else {
+                                                       alert("Sua média foi: "+media.toFixed(2)+"\nVocê foi reprovado");
+                                                       return true;
+                                                  }
+                                             }
+                                        }
+                                   </script>
+                              </body>
+                         </html>
+                    </textarea>
+                    <br><br>
+                    <input type="button" value="testar pagina" onclick="document.write(fonte.value);">
+               </form>
+          </center>
+     </body>
+</html>	 

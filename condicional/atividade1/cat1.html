@@ -1,0 +1,135 @@
+<!--Abrind a tag original da página-->
+<html>
+     <header>
+          <nav>
+              <a href="../../siteinicial/condi.html"><div class="opcao">Voltar</div></a>
+          </nav>
+       </header>
+     <center>
+          <br><br><br>
+          <h1>Estrutura Se (If()) Simples</h1>
+          <br>
+          <h3>Usando a estrutura condicional "Se(If())", quando o usuário apertar o botão "Enviar"<br>
+          com o campo vazio, o site vai informar que o campo "Idade" deve ser preenchido,<br> 
+          assim que o campo for preenchido, o site continua a execução normalmente.</h3>
+     </center>
+     <head>
+          <title>Estrutura Se (If())</title>
+	     <meta charse="UTF-8">
+	     <meta name="Autor" content="Matheus F. Leal">
+     </head>
+     <style>
+          header {
+               height:0px;
+               background-color:#330000;
+          }
+          nav {
+               float:left;
+               clear:both;
+               width:50%;
+               margin:0px auto;
+               height:55px;
+          }	 
+          nav a {
+               color:white;
+               text-decoration:none;
+               text-align:center;
+          }
+          nav .opcao {
+               float:left;
+               width:31.3%;
+               background-color:#330000;
+               padding:10px 0;
+               margin:0 1%;
+               font-size:26px;
+          }
+          nav .opcao:hover {
+               background-color:#500000;
+          }
+     </style>
+     <!--Abrindo a tag body da página principal, colocando a cor cinza no body da página-->
+     <body bgcolor="#cccccc">
+     <!--Centralizando o formulário que conterá o componente textarea-->
+          <center>
+               <form>
+                    <br>
+                    <textarea name="fonte" cols="150" rows="30">
+                         <html>
+                              <body>
+                                   
+                                   <head>
+	                                   <meta charset="UTF-8">
+                                        <style>
+                                        section {
+	                                        margin-top:0px auto;
+                                        }
+                                        .cadidade {
+                                             width:300px;
+                                             margin:0px auto;
+                                             font-weight:bold;
+                                             margin-bottom:10px;
+                                        }
+                                        .cadidade input {
+                                             margin:5px auto;
+                                             width:100%;
+                                             padding:5px 0;
+                                        }
+                                        .cadidade button {
+                                             width:30%;
+                                             margin:0 10%;
+                                             background-color:#b1ccf5;
+                                             font-weight:bold;
+                                             font-size:16px;
+                                        }
+                                        label {
+                                             float:left;
+                                        }
+                                        h2 {
+                                             text-align:center;
+                                             margin-top:0px;
+                                             margin-bottom:10px;
+                                             font-size:50px;
+                                        }
+                                        </style>
+                                        <section>
+		                                   <h2>Idade</h2>
+			                              <font face="arial">
+			                              <form name="frmtstidadese" action="#" method="get" onsubmit="return validaFormulario()">
+				                         <fieldset class="cadidade">
+					                    <legend>Entrada de Dados</legend>
+					                         <br>
+					                         <label for="idade">Idade: </label>
+						                    <input type="text" name="txtidade" id="idade"><br>
+					                         <br>
+					                         <button type="reset">Limpar</button><button type="submit">Enviar</button><button type="button" onClick="window.location.reload()">Voltar</button>
+					                    </fieldset>
+				                         </form>
+			                              </font>
+		                              </section>
+		                              <title>Estrutura SE JavaScript</title>
+		                                   <link rel="stylesheet" type="text/css" href="css/cfgat1.css">
+		                                   <script type="text/javascript">
+                                                  function validaFormulario() {
+                                                       if (document.frmtstidadese.txtidade.value==""){
+                                                            alert("Campo idade deve ser preenchido!");
+                                                            document.frmtstidadese.txtidade.focus();
+                                                            return false;
+                                                       }else {
+                                                            let idade=document.frmtstidadese.txtidade.value;
+                                                            if(idade>=18){
+                                                            alert("Você é maior de idade");
+                                                            }
+                                                       }
+                                                            
+                                                  }
+                                             </script>
+	                              </head>
+	                         </body>
+                         </html>
+                    </textarea>
+                    <br><br>
+                    <input type="button" value="Testar Página" onclick="document.write(fonte.value);">
+               </form>
+          </center>
+     </body>
+</html>	 

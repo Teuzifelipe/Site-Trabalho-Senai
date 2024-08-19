@@ -1,0 +1,132 @@
+@charset "utf-8";
+
+   body{
+	   margin:0 auto;
+	   font-family:Adobe Hebrew, Roman New Times;
+	   background-color:rgb(231, 231, 231);
+   }
+
+     header {
+		 height:170px;
+	     background-color:#330000;
+	 }
+	 header img {
+		 float:left;
+		 height:150px;
+		 width:150px;
+		 margin:10px;
+	 }
+	 header h1 {
+		 float:left;
+		 margin:50px 0 0 30px;
+		 font-size:60px;
+		 color:#ffffff;
+	 }
+	 
+     nav {
+		 clear:both;
+		 width:80%;
+		 margin:0px auto;
+		 height:55px;
+		 border: 10px;
+	 }	 
+	 nav a {
+		 color:white;
+		 text-decoration:none;
+		 text-align:center;
+	 }
+	 nav .opcao {
+		 float:left;
+		 width:31.3%;
+		 background-color:#330000;
+		 padding:10px 0;
+		 margin:0 1%;
+		 font-size:26px;
+	 }
+	 nav .opcao:hover {
+		 background-color:#500000;
+	 }
+	 
+	 section {
+		 clear:both;
+		 min-height:680px;
+		 width:100%;
+		 margin-block-end:0px;
+	 }
+	 footer {
+		background-color:#330000;
+		color:#fff;
+		text-align:center;
+		padding:10px;
+		bottom: 0px;
+	}
+     section #topo {
+		 width:1150px;
+		 margin:170px auto;
+		 height:90px;
+		 /*background-color:red;*/
+	 }
+	 section #titulos {
+		 height:80px;
+		 width:650px;
+		 margin:0px auto;
+	 }
+	 h2 {
+		 text-align:center;
+		 margin-top:40px;
+		 margin-bottom:100px;
+		 font-family:roman new times;
+		 font-size:40px;
+		 color:black;
+	 }
+	 section p {
+		 clear:both;
+		 text-align:left;
+		 margin:5px 10px;
+		 margin-bottom: 100px;
+		 color:black;
+	 }
+	 
+	 *{margin: 0; padding: 0;}
+
+	.menu{
+		list-style:none; 
+		border:1px solid #c0c0c0; 
+		float:left;
+	}
+
+	.menu li{
+		position:relative;
+		border-right:0px solid #c0c0c0;
+	}
+
+	.menu li a{
+		color:#333;
+		font-size:20px;
+		text-decoration:none; 
+		padding:20px 525px; 
+		display:block;
+	}
+
+	.menu li a:hover{
+		color:black;
+		text-shadow:0px 0px 5px gray;
+	}
+
+	.menu li ul{
+		position:sticky; 
+		top:25px; 
+		left:0; 
+		background-color:#fff; 
+		display:none;
+	}
+
+	.menu li:hover ul, .menu li.over ul{
+		display:block;
+	}
+
+	.menu li ul li{
+		border:0px solid #c0c0c0; 
+		display:block; 
+		width:10px;
+	}
